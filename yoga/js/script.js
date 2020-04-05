@@ -10,7 +10,7 @@ window.addEventListener('DOMContentLoaded', () => {
             if (i == showIdx) {
                 if (classes.contains('hide')) {
                     classes.add('show');
-                    classes.remove('hide');    
+                    classes.remove('hide');
                 }
             } else {
                 if (!classes.contains('hide')) {
@@ -27,11 +27,37 @@ window.addEventListener('DOMContentLoaded', () => {
         const target = event.target;
         if (target && target.classList.contains('info-header-tab')) {
             for (let i = 0; i < tab.length; i++) {
-                if ( target == tab[i] ) {
+                if (target == tab[i]) {
                     showTabContent(i);
                 }
             }
         }
     });
+
+    let more = document.querySelector('button.more'),
+        overlay = document.querySelector('.overlay'),
+        close = document.querySelector('.popup-close');
+
+    more.addEventListener('click', () => {
+        showMoreModal();
+    });
+
+    // close.addEventListener('click', () => {
+    //     more.classList.remove('more-splash');
+    //     overlay.style.display = 'none';
+    //     document.body.style.overflow = '';
+    // });
+
+    function showMoreModal() {
+        overlay.style.display = 'block';
+        more.classList.add('more-splash');
+        document.body.style.overflow = 'hidden';
+        close.onclick = function () {
+            more.classList.remove('more-splash');
+            overlay.style.display = 'none';
+            document.body.style.overflow = '';
+        };
+    }
+
 
 });
