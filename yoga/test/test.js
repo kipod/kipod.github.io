@@ -11,4 +11,6 @@ window.addEventListener('DOMContentLoaded', () => {
         boundShowUser('Eagle', 'John');
     });
 
+    showUser.apply(age, ['Ivanov', 'Ivan']);
+
 });
