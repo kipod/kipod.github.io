@@ -77,17 +77,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
     let more = document.querySelector('button.more'),
         overlay = document.querySelector('.overlay'),
-        close = document.querySelector('.popup-close');
+        close = document.querySelector('.popup-close'),
+        descriptionBtn = document.querySelectorAll('.description-btn');
 
-    more.addEventListener('click', () => {
-        showMoreModal();
+    more.addEventListener('click', showMoreModal);
+
+    descriptionBtn.forEach(element => {
+        element.addEventListener('click', showMoreModal);
     });
-
-    // close.addEventListener('click', () => {
-    //     more.classList.remove('more-splash');
-    //     overlay.style.display = 'none';
-    //     document.body.style.overflow = '';
-    // });
 
     function showMoreModal() {
         overlay.style.display = 'block';
