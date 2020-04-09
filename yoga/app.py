@@ -1,12 +1,13 @@
 from flask import Flask
 from flask import request
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='/')
 
 
 @app.route('/')
-def hello():
-    return 'Hello, World!'
+def index():
+    # return 'Hello, World!'
+    return app.send_static_file('index.html')
 
 
 @app.route('/server', methods=['POST'])
