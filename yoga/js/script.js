@@ -69,7 +69,7 @@ window.addEventListener('DOMContentLoaded', () => {
                 if (t.total <= 0) {
                     clearInterval(timeInterval);
                 }
-            }, 1000)
+            }, 1000);
         }
     }
 
@@ -96,4 +96,30 @@ window.addEventListener('DOMContentLoaded', () => {
             document.body.style.overflow = '';
         };
     }
+
+    ///////////////////////////////////////////
+    let message = {
+        loading: 'Loading...',
+        success: ':) Thank you! We will connect you soon.',
+        failure: 'Somthing wrong! :('
+    };
+
+    let form = document.querySelector('.main-form'),
+        input = form.getElementsByTagName('input'),
+        statusMessage = document.createElement('div');
+
+    statusMessage.classList.add('status');
+
+    form.addEventListener('submit', event=> {
+        event.preventDefault();
+        form.appendChild(statusMessage);
+
+        let request = new XMLHttpRequest();
+        request.open('POST', 'http://127.0.0.1:5000/server');
+        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+
+        let formData = new FormData(form);
+        request.send(formData);
+    });
+
 });
