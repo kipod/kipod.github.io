@@ -116,10 +116,32 @@ window.addEventListener('DOMContentLoaded', () => {
 
         let request = new XMLHttpRequest();
         request.open('POST', 'http://127.0.0.1:5000/server');
-        request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        request.setRequestHeader('Content-Type', 'application/json; charset=utf-8');
+        statusMessage.innerHTML = message.loading;
+
+        request.addEventListener('readystatechange', event => {
+            if (request.readyState < 4) {
+                statusMessage.innerHTML = message.loading;
+            } else if(request.readyState === 4 && request.status == 200) {
+                statusMessage.innerHTML = message.success;
+            } else {
+                statusMessage.innerHTML = message.failure;
+            }
+        });
 
         let formData = new FormData(form);
-        request.send(formData);
+        let obj = {};
+        formData.forEach((value, key) => {
+            obj[key] = value;
+        });
+        let json = JSON.stringify(obj);
+        request.send(json);
+
+        for (let i=0; i<input.length; i++) {
+            input[i].value = '';
+        }
+
+
     });
 
 });

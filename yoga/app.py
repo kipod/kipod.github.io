@@ -1,5 +1,8 @@
+import time
 from flask import Flask
 from flask import request
+
+
 
 app = Flask(__name__, static_folder='/')
 
@@ -12,6 +15,8 @@ def index():
 
 @app.route('/server', methods=['POST'])
 def server():
-    data = [request.form[i] for i in [v for v in request.values]]
+    # data = [request.form[i] for i in [v for v in request.values]]
+    data = request.json
     assert(len(data))
+    time.sleep(2)
     return 'OK'

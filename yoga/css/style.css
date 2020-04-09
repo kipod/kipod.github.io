@@ -662,6 +662,13 @@ header ul li:before {
   font-size: 30px;
   text-align: center;
 }
+.status {
+  padding: 0;
+  font-weight: 400;
+  line-height: 27px;
+  font-size: 14px;
+  text-align: center;
+}
 .overlay .popup-form__label {
   display: block;
   margin-top: 23px;
