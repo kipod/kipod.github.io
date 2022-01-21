@@ -5,21 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+
   </head>
   <body>
     <!-- Main Container -->
-    <div>
+    <div class="main-container">
       <!-- Main -->
-      <div>
+      <div class="main-content-section">
         <!-- about me section -->
-        <h2>CTO</h2>
-        <h1>Nikolay Chernov</h1>
-        <p>Senior Software Engineer and Technical Lead with more than 25 years experience. Object-Oriented Analysis and Design, Design Patterns, Best Programming Practices in C++ and C#, TDD (Test Driven Development), Qt, Cloud Application(Azure), Agile development with Scrum, client/server programming, TCP/IP and web protocols, Windows system programming, Multi-threading & IPC, Web Services, Git, SVN, TFS, Perforce, DDK/WIN PE build environment (NT Build), CMake. Last years focused on Web Application development on Python and TypeScript for implementing solution for small and middle businesses.</p>
+        <div class="about-me-section">
+          <h2 class="about-me-profession">CTO</h2>
+          <h1>Nikolay Chernov</h1>
+          <p>Senior Software Engineer and Technical Lead with more than 25 years experience. Object-Oriented Analysis and Design, Design Patterns, Best Programming Practices in C++ and C#, TDD (Test Driven Development), Qt, Cloud Application(Azure), Agile development with Scrum, client/server programming, TCP/IP and web protocols, Windows system programming, Multi-threading & IPC, Web Services, Git, SVN, TFS, Perforce, DDK/WIN PE build environment (NT Build), CMake. Last years focused on Web Application development on Python and TypeScript for implementing solution for small and middle businesses.</p>
+        </div>
         <!-- My Projects -->
-        <div>
+        <div class="my-project-section">
           <h3>Projects</h3>
           <ol>
-            <li>
+            <li class="projects-item">
               <a href="https://www.simple2b.net/">https://www.simple2b.net/</a>
               <span>..................................</span>
               <span>[ HTML5, CSS, Bootstrap]</span>
@@ -38,7 +45,7 @@
 
         </div>
         <!-- My Work Experience section-->
-        <div>
+        <div class="my-work-experiance-section">
           <h3>Main Work Experience</h3>
           <!-- Simple2B -->
           <div>
@@ -74,7 +81,7 @@
           </div>
         </div>
         <!-- Education section -->
-        <div>
+        <div class="education-section">
           <h3>Education</h3>
           <h4>National Technical University of Ukraine (KPI)</h4>
           <h5>Mechanical Engineer</h5>
@@ -82,8 +89,8 @@
         </div>
       </div>
       <!-- Side bar -->
-      <aside>
-        <img src="img/photo_7.png" alt="My Photo">
+      <aside class="side-bar-section">
+        <img src="img/photo_7.png" width="300" alt="My Photo">
         <!-- Contact section -->
         <div>
           <h3>Contacts</h3>

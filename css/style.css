@@ -1,0 +1,41 @@
+body {
+    background-color: #E5E5E5;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.about-me-profession {
+    font-size: 14px;
+    font-weight: 700;
+    color: #000;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1200px;
+    background-color: #fff;
+    margin: 40px auto;
+}
+
+.main-content-section {
+}
+
+.about-me-section {
+    /* background: rgb(145, 139, 67); */
+}
+
+.my-project-section {
+    /* background: red; */
+}
+
+.my-work-experiance-section {
+    /* background: blue; */
+}
+
+.education-section {
+    /* background: green; */
+}
+
+.side-bar-section {
+    background-color: #1E2939;
+}
